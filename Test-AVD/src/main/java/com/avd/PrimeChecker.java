@@ -3,20 +3,17 @@ package com.avd;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.lang.reflect.Method;
-import java.util.HashSet;
-import java.util.Set;
 
 class Prime {
 	public void checkPrime(int... n) {
 		for (int j = 0; j < n.length; j++) {
-			int c = 0;
+			boolean isPrime = true;
 			for (int i = 2; i < n[j]; i++) {
 				if (n[j] % i == 0) {
-					c++;
+					isPrime= false;
 				}
 			}
-			if (c == 0 && n[j] != 1) {
+			if (isPrime && n[j] != 1) {
 				System.out.print(n[j] + " ");
 			}
 
