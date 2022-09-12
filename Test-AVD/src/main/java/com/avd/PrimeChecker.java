@@ -39,21 +39,7 @@ public class PrimeChecker {
 			ob.checkPrime(n1);
 			ob.checkPrime(n1, n2);
 			ob.checkPrime(n1, n2, n3);
-			ob.checkPrime(n1, n2, n3, n4, n5);
-			Method[] methods = Prime.class.getDeclaredMethods();
-			Set<String> set = new HashSet<>();
-			boolean overload = false;
-			for (int i = 0; i < methods.length; i++) {
-				if (set.contains(methods[i].getName())) {
-					overload = true;
-					break;
-				}
-				set.add(methods[i].getName());
-
-			}
-			if (overload) {
-				throw new Exception("Overloading not allowed");
-			}
+			ob.checkPrime(n1, n2, n3, n4, n5);			
 		} catch (Exception e) {
 			System.out.println(e);
 		}
